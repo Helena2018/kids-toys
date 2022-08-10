@@ -10,7 +10,6 @@ const App = () => {
           <p>Shop Now</p>
         </div>
       </div>
-
     </div>
   );
 }
