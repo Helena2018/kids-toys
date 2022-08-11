@@ -1,14 +1,14 @@
 .categories-container {
   background-color: red;
   padding: 10px;
-}
 
-.categories-container .category-container {
-  background-color: green;
-  padding: 20px;
-}
+  .category-container {
+    background-color: green;
+    padding: 20px;
 
-.categories-container .category-container .category-body-container {
-  background-color: yellow;
-  padding: 30;
+    .category-body-container {
+      background-color: yellow;
+      padding: 30;
+    }
+  }
 }
