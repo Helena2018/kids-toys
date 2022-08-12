@@ -4,23 +4,23 @@ const App = () => {
   const categories = [
     {
       id: 1,
-      title: 'Cars',
+      title: 'hats',
     },
     {
       id: 2,
-      title: 'Dolls',
+      title: 'Jackets',
     },
     {
       id: 3,
-      title: 'Aeroplanes',
+      title: 'Sneakers',
     },
     {
       id: 4,
-      title: 'Learning',
+      title: 'Womens',
     },
     {
       id: 5,
-      title: 'Cartoons',
+      title: 'Mens',
     }
   ]
 
