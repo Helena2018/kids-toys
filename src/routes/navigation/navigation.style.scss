@@ -10,5 +10,18 @@
     width: 70px;
     padding: 25px;
   }
+
+  .nav-links-container {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .nav-link {
+      padding: 10px 25px;
+      cursor: pointer;
+    }
+  }
 }
 
