@@ -5,6 +5,12 @@ import {
   signInWithPopup,
   GoogleAuthProvider,
 } from 'firebase/auth';
+import {
+  getFirestore,
+  doc,
+  getDoc,
+  setDoc,
+} from 'firebase/firestore'
 
 const firebaseConfig = {
   apiKey: "AIzaSyAbh5Etu_O5quhVVCcRAs8vUfqWFZTGdaE",
