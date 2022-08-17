@@ -4,6 +4,7 @@ import {
   signInWithRedirect,
   signInWithPopup,
   GoogleAuthProvider,
+  signInWithEmailAndPassword,
 } from 'firebase/auth';
 import {
   getFirestore,
@@ -60,13 +61,4 @@ export const createUserDocumentFromAuth = async (userAuth) => {
   }
 
   return userDocRef;
-
-  // If user data does not exists
-  // Create / set document with the data from userAuth in my collection
-
-
-  // If user data exists
-  // Return userDocRef
-
-
-}
+};
