@@ -62,3 +62,9 @@ export const createUserDocumentFromAuth = async (userAuth) => {
 
   return userDocRef;
 };
+
+export const createAuthUserWithEmailAndPassword = async (email, password) => {
+  if (!email || !password) return;
+
+  return await signInWithEmailAndPassword(auth, email, password);
+}
