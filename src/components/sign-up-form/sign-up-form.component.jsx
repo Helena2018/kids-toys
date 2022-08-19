@@ -4,6 +4,7 @@ import  { createAuthUserWithEmailAndPassword, createUserDocumentFromAuth } from 
 
 import FormInput from '../form-input/form-input.component';
 
+
 const defaultFormFields = {
   displayName: '',
   email: '',
