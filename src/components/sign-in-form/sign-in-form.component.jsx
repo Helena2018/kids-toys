@@ -41,7 +41,10 @@ const SignInForm = () => {
       resetFormFields();
 
     } catch(error) {
-     
+      if (error.code === 'auth/wrong-password') {
+        alert('Sorry, password is not correct!')
+        resetFormFields();
+      } 
     }
   }
 
