@@ -41,10 +41,22 @@ const SignInForm = () => {
       resetFormFields();
 
     } catch(error) {
-      if (error.code === 'auth/wrong-password') {
-        alert('Sorry, password is not correct!')
-        resetFormFields();
-      } 
+      switch(error.code) {
+        case 'auth/wrong-password':
+          alert('incorrect password for email')
+          break;
+        case 'auth/user-not-found':
+          alert('no user associated with this email')
+          break;
+      }
+      resetFormFields();
+      // if(error.code === 'auth/wrong-password') {
+      //   alert('Sorry, password is not correct!')
+      //   resetFormFields();
+      // } else if(error.code === 'auth/user-not-found') {
+      //   alert('User is not exist')
+      //   }
+      console.log(error)
     }
   }
 
@@ -78,7 +90,7 @@ const SignInForm = () => {
         />
         <div className='buttons-container'>
           <Button type='submit'>Sign In</Button>
-          <Button onClick={signInWithGoogle} buttonType='google' type='submit'>Google Sign In</Button>
+          <Button onClick={signInWithGoogle} buttonType='google' type='button'>Google Sign In</Button>
         </div>
       </form>
     </div>
