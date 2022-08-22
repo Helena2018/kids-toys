@@ -33,7 +33,6 @@ const Navigation = () => {
                 SIGN IN
               </Link>
           )}
-          
         </div>
       </div>
       <Outlet />
