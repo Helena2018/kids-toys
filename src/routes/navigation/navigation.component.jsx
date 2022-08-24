@@ -6,6 +6,8 @@ import { signOutUser } from '../../utils/firebase/firebase.utils';
 import { Outlet, Link } from 'react-router-dom';
 import { ReactComponent as CrownLogo } from '../../assets/crown.svg'
 
+import CardIcon from '../../components/card-icon/card-icon.component'
+
 import './navigation.style.scss';
 
 const Navigation = () => {
@@ -28,6 +30,7 @@ const Navigation = () => {
                 SIGN IN
               </Link>
           )}
+          <CardIcon />
         </div>
       </div>
       <Outlet />
