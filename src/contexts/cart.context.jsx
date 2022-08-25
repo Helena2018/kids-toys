@@ -2,7 +2,7 @@ import { createContext, useState } from "react"
 
 const addCartItem = (cartItems, productToAdd) => {
   const existingCartItem = cartItems.find(
-    (cartItem) => cartItems.id === productToAdd.id
+    (cartItem) => cartItem.id === productToAdd.id
   );
 
   if(existingCartItem) {
@@ -31,7 +31,7 @@ export const CartProvider = ({ children }) => {
     setCartItems(addCartItem(cartItems, productToAdd));
   }
 
-  const value = {isCartOpen, setIsCartOpen, addItemToCart, cartItems };
+  const value = { isCartOpen, setIsCartOpen, addItemToCart, cartItems };
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>
 };
