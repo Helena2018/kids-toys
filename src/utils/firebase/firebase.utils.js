@@ -14,6 +14,8 @@ import {
   doc,
   getDoc,
   setDoc,
+  collection,
+  writeBatch,
 } from 'firebase/firestore'
 
 const firebaseConfig = {
