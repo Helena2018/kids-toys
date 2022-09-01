@@ -1,5 +1,7 @@
 import './category-preview.style.scss';
 
+import ProdcutCard from '../../components/product-card/product-card.component'
+
 const CategoryPreview = ({ title, products }) => {
   return (
     <div className='category-preview-container'>
