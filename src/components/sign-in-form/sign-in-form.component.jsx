@@ -32,8 +32,7 @@ const SignInForm = () => {
     event.preventDefault();
 
     try {
-      const {user} = await signInAuthUserWithEmailAndPassword(email, password);
-
+      await signInAuthUserWithEmailAndPassword(email, password);
       resetFormFields();
 
     } catch(error) {
@@ -46,13 +45,6 @@ const SignInForm = () => {
           break;
       }
       resetFormFields();
-      // if(error.code === 'auth/wrong-password') {
-      //   alert('Sorry, password is not correct!')
-      //   resetFormFields();
-      // } else if(error.code === 'auth/user-not-found') {
-      //   alert('User is not exist')
-      //   }
-      console.log(error)
     }
   }
 
