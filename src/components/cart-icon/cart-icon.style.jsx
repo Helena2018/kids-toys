@@ -10,16 +10,16 @@ export const CartIconContainer = styled.div`
   justify-content: center;
   align-items: center;
   cursor: pointer;
-`
+`;
 
 export const ItemCount = styled.span`
   position: absolute;
   font-size: 10px;
   font-weight: bold;
   bottom: 12px;
-`
+`;
 
 export const ShoppingIcon = styled(ShoppingSvg)`
   width: 24px;
   height: 24px;
-`
+`;
