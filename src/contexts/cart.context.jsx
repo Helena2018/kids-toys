@@ -1,4 +1,6 @@
-import { createContext, useReducer } from "react"
+import { createContext, useReducer } from "react";
+
+import { createAction } from "../utils/reducer/reducer.utils";
 
 const addCartItem = (cartItems, productToAdd) => {
   const existingCartItem = cartItems.find(
@@ -92,8 +94,8 @@ export const CartProvider = ({ children }) => {
 
     const newCartTotal = cartItems.reduce((total, cartItem) => total + (cartItem.price * cartItem.quantity), 0);
 
-    dispatch({ type: CART_ACTION_TYPE.SET_CART_ITEMS, payload: { cartItems: newCartItems, cartTotal: newCartTotal, cartCount: newCartCount }})
-  };
+    dispatch(createAction(CART_ACTION_TYPE.SET_CART_ITEMS, { cartItems: newCartItems, cartTotal: newCartTotal, cartCount: newCartCount }));
+};
 
   const addItemToCart = (productToAdd) => {
     const newCartItems = addCartItem(cartItems, productToAdd);
@@ -111,7 +113,7 @@ export const CartProvider = ({ children }) => {
   }
 
   const setIsCartOpen = (bool) => {
-    dispatch({ type: CART_ACTION_TYPE.SET_IS_CART_OPEN, payload: bool})
+    dispatch(createAction(CART_ACTION_TYPE.SET_IS_CART_OPEN, bool))
   };
 
   const value = { 
