@@ -1,4 +1,5 @@
 import { CheckoutContainer, CheckoutHeader, HeaderBlock, Total } from './checkout.style';
+
 import { useContext } from 'react';
 
 import { CartContext } from '../../contexts/cart.context';
