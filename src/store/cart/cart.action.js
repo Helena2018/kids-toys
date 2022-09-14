@@ -45,13 +45,13 @@ export const addItemToCart = (cartItems, productToAdd) => {
   return createAction(CART_ACTION_TYPES.SET_CART_ITEMS, newCartItems);
 };
 
-export const removeItemToCart = (cartItems, productToRemove) => {
+export const removeItemFromCart = (cartItems, productToRemove) => {
   const newCartItems = removeCartItem(cartItems,productToRemove);
   return createAction(CART_ACTION_TYPES.SET_CART_ITEMS, newCartItems);
 };
 
-export const clearItemFromCart = (cartItems, productToClear) => {
-  const newCartItems = clearCartItem(cartItems, productToClear);
+export const clearItemFromCart = (cartItems, cartItemToClear) => {
+  const newCartItems = clearCartItem(cartItems, cartItemToClear);
   return createAction(CART_ACTION_TYPES.SET_CART_ITEMS, newCartItems);
 }
 
