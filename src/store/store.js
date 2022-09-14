@@ -4,7 +4,6 @@ import { compose, createStore, applyMiddleware } from 'redux';
 import { persiststore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
-
 import { rootReducer } from './root-reducer';
 
 const loggerMiddleware = (store) => (next) => (action) => {
@@ -20,7 +19,9 @@ const persistConfig = {
   blacklist: ['user'],
 }
 
+const persistedReducer = persistReducer(persistConfig, rootReducer)
+
 const middleWares = [loggerMiddleware];
 const composeEnhancers = compose(applyMiddleware(...middleWares));
 
-export const store = createStore(rootReducer, undefined, composeEnhancers);
+export const store = createStore(persistedReducer, undefined, composeEnhancers);
