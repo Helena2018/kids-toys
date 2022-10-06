@@ -106,3 +106,9 @@ export const signOutUser = async () => await signOut(auth);
 
 export const onAuthStateChangedListener = (callback, errorCallback, completedCallback) =>
   onAuthStateChanged(auth, callback, errorCallback, completedCallback);
+
+export const getCurrentUser = () => {
+  return new Promise((resolve, reject) => {
+    
+  })
+}
